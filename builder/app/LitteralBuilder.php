@@ -2,7 +2,7 @@
 
 namespace App;
 
-class MySQLQueryBuilder implements QueryBuilderInterface
+class LitteralBuilder implements QueryBuilderInterface
 {
     protected string $select;
     protected string $from;
@@ -35,6 +35,6 @@ class MySQLQueryBuilder implements QueryBuilderInterface
 
     public function getQuery(): string
     {
-        return "SELECT {$this->select} FROM {$this->from} WHERE {$this->where} ORDER BY {$this->orderBy};";
+        return "Je selectionne {$this->select} de la table {$this->from} où {$this->where} trié par {$this->orderBy};";
     }
 }
